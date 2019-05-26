@@ -69,9 +69,11 @@ describe "Actor" do
     khaleesi.actor = emilia
     got = Show.new(:name => "Game of Thrones")
     khaleesi.show = got
+    binding.pry
     khaleesi.save
-
+    # binding.pry
     khaleesi.reload
+    # binding.pry
     expect(emilia.list_roles).to include("Khaleesi - Game of Thrones")
   end
 end
